@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "forum-ir",
+    "version": "1.0",
+    "homepage_url": "https://github.com/scullionw/forum-ir/",
+    "description": "Show irating on hover in forums",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://members.iracing.com/jforum/posts/list/*.page"
+            ],
+            "js": [
+                "irating.js"
+            ]
+        }
+    ],
+    "applications": {
+        "gecko": {
+            "id": "@forum-ir-extension"
+        }
+    }
+}
